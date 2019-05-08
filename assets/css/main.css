@@ -10463,6 +10463,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
+    overflow: hidden;
     cursor: pointer; }
     header .contact-us p {
       position: absolute;
