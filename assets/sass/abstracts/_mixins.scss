@@ -1,0 +1,7 @@
+@mixin  competability($name, $value) {
+    #{$name}: #{$value};
+    @each $b in $browsers
+    {
+        #{$b + $name}: #{$value};
+    }
+}

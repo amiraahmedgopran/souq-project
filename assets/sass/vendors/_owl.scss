@@ -1,0 +1,10 @@
+@import "node_modules/owl.carousel/src/scss/owl.carousel.scss";
+@import "node_modules/owl.carousel/src/scss/owl.theme.default.scss";
+
+#owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+@import 'node_modules/aos/src/sass/aos.scss';
+

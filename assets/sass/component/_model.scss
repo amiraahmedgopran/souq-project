@@ -1,0 +1,19 @@
+.modal-dialog {
+    max-width: 82%;
+    padding: 49px 60px 23px 60px;
+    background-image: url("../../assets/images/mod.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: $white;
+    .modal-content {
+        border: none;
+        background-color: transparent;
+        .close {
+            position: absolute;
+            left: -17px;
+            top: -17px;
+            font-size: 36px;
+            font-weight: normal;
+        }
+    }
+}

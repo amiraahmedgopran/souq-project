@@ -1,0 +1,119 @@
+.projects {
+    .nav-tabs {
+        border-bottom: none;
+    }
+    .nav-item {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        position: relative;
+        width: 147px;
+        height: 85px;
+        margin-bottom: 100px;
+        background-color: #28324e;
+        border: 1px solid #4f5770;
+        z-index: 22;
+        border-radius: 0;
+        margin-left: 30px;
+        text-align: center;
+        color: $white;
+        i {
+            color: $secondary-color;
+            font-size: 40px;
+        }
+        .tab-border {
+            &::after {
+                border-color: transparent;
+                border-width: 0px 73px 45px 73px;
+                border-bottom-color: #4f5770;
+                top: -46px;
+                z-index: 1;
+                content: "";
+                display: block;
+                width: 0;
+                border-style: solid;
+                position: absolute;
+                left: 0;
+            }
+            &::before {
+                border-color: transparent;
+                border-width: 45px 73px 0 73px;
+                bottom: -46px;
+                border-top-color: #4f5770;
+                z-index: 1;
+                content: "";
+                display: block;
+                width: 0;
+                border-style: solid;
+                position: absolute;
+                left: 0;
+            }
+        }
+        &:first-of-type {
+            font-size: 24px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            border-style: solid;
+            border-color: transparent;
+            position: absolute;
+            left: 0;
+            border-color: transparent;
+            border-bottom-color: transparent;
+            border-width: 0px 73px 45px 73px;
+            border-bottom-color: #28324e;
+            bottom: 100%;
+            z-index: 5;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            border-style: solid;
+            border-color: transparent;
+            position: absolute;
+            left: 0;
+            border-width: 45px 73px 0 73px;
+            border-bottom-color: #28324e;
+            top: 100%;
+            z-index: 2;
+            border-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: #28324e;
+        }
+        &.active {
+            border: 0;
+            color: #28324e;
+        }
+        &.active::after {
+            border-bottom-color: #fff;
+        }
+        &.active::before {
+            border-top-color: #fff;
+        }
+        &:hover {
+            background-color: $white;
+            @include competability(transition,all 0.5s ease-in-out);
+            color: #28324e;
+            &::after, .tab-border:after {
+                border-bottom-color: $white;
+                @include competability(transition,all 0.5s ease-in-out);
+            }
+            &:before, .tab-border::before {
+                border-top-color: $white;
+                @include competability(transition,all 0.5s ease-in-out);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #nav-tab {
+        display: none;
+    }
+    .projects .gallary-img {
+        width: 50%;
+    }
+}

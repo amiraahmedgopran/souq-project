@@ -1,0 +1,374 @@
+header {
+    background-color: $main-color;
+    color: $white;
+    position: relative;
+    .nav-icon-small {
+        display: none;
+    }
+    .nav-small {
+        display: none;
+    }
+    .hexagon {
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        width: 165px;
+        height: 145px;
+        z-index: 33;
+    }
+    .hexagon1 {
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        width: 185px;
+        height: 165px;
+        transform: scale(0.1);
+        opacity: 0;
+        animation: hexa1 3s linear infinite; 
+        @include competability(animation-delay,1s);
+
+    }
+
+    .hexagon2 {
+        position: absolute;
+        left: 25px;
+        top: -2px;
+        width: 196px;
+        height: 190px;
+        transform: scale(0.1);
+        opacity: 0;
+        animation: hexa1 3s linear infinite; 
+        @include competability(animation-delay,2s);
+    }
+    .hexagon3 {
+        position: absolute;
+        left: 17px;
+        top: -16px;
+        width: 212px;
+        height: 217px;
+        transform: scale(0.1);
+        opacity: 0;
+        animation: hexa1 3s linear infinite; 
+        @include competability(animation-delay,3s);
+    }
+    .box {
+        .traingle {
+            fill: #eee;
+            margin-top: 46px;
+        }
+    }
+    .top-navbar {
+        height: 120px;
+        .logo {
+            float: right;
+            margin-left: 58px;
+        }
+        ul.top-navbar-items {
+            margin-right: 30px;
+            .navbar-item {
+                display: inline-block;
+                padding-left: 20px;
+                cursor: pointer;
+                a {
+                    color: $white;
+                    font-size: 21px;
+                }
+                &.nav-dropdown {
+                    .nav-dropdown-list {
+                        position: absolute;
+                        top: 120px;
+                        z-index: 99;
+                        left: 0;
+                        width: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+                        transform-origin: center top;
+                        border-top: 2px solid $secondary-color;
+                        padding: 15px 10%;
+                        background-color: $white;
+                        @include competability(transition,all 0.5s ease-in-out);
+                        @include competability(transform,rotateX(-30deg));
+                        transform-style: preserve-3d;
+                        display: block;
+                        &::after {
+                            content: '';
+                            background-image: url("../../assets/images/mm-pattern-bottom.png");
+                            background-repeat: no-repeat;
+                            background-position: left bottom;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-size: contain;
+                            z-index: 10;
+                            width: 300px;
+                            height: 227px;
+                        }
+                        & > li {
+                            width: 32%;
+                            display: inline-block;
+                            float: right;
+                            a {
+                                font-size: 16px;
+                                display: block;
+                                margin: 15px auto;
+                            }
+                            h3 {
+                                color: $secondary-color;
+                                font-size: 18px;
+                                font-weight: bold;
+                                margin-top: 30px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                        &.is-open {
+                            top: 98px;
+                            visibility: visible;
+                            @include competability(transform,rotateY(0deg));
+                            opacity: 1;
+                            @include competability(transition,all 0.5s ease-in-out);
+                        }
+                        a {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        margin-top: 113px;
+    }
+    .description {
+        font-size: 21px;
+    }
+    .count-box {
+        .count {
+            float: right;
+            span {
+                color: $secondary-color;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            &:first-of-type {
+                width: 40%;
+            }
+            &:last-of-type {
+                width: 60%;
+                padding-right: 30px;
+                border-right: 1px solid rgba(255, 255, 255, 0.15);
+            }
+        }
+    }
+    .contact-us {
+        width: 271px;
+        height: 224px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        p {
+            position: absolute;
+            top: 83px;
+            left: 63px;
+            z-index: 44;
+            width: 120px;
+            text-align: center;
+        }
+    }
+    .vendor {
+        margin-top: 99px;
+        padding-right: 50px;
+    }
+    .model-block {
+        h2 {
+            color: $secondary-color;
+            margin: 25px auto;
+        }
+        a {
+            color: #337ab7;
+            font-size: 18px;
+            font-weight: 600;
+            padding-right: 21px;
+            margin-bottom: 17px;
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        i {
+            font-size: 25px;
+        }
+        i.gray {
+            color: #ccc;
+        }
+        i.orang {
+            color: $secondary-color;
+        }
+        i.green {
+            color: #2cb741;
+        }
+        &.border-block {
+            border-right: 1px solid #eee;
+            padding-right: 50px;
+        }
+    }
+    .contact {
+        h3 {
+            color: $main-color;
+            font-weight: bold;
+            margin-top: 22px;
+            margin-bottom: 48px;
+        }
+        label {
+            color: $main-color;
+        }
+        .check {
+            color: #808aa6;
+            font-size: 16px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .input-form {
+            width: 100%;
+            font-size: 16px;
+            border: 2px solid #dee1e9;
+            height: 60px;
+            padding: 0 27px;
+            color: #808aa6;
+            position: relative;
+            @include competability(appearance,none);
+
+            &:focus {
+                border-color: $secondary-color;
+            }
+        }
+        select {
+            background-image: url("../../assets/images/arrow-down-gray-hi.png");
+            background-repeat: no-repeat;
+            background-position: 20px 24px;
+            background-size: 18px;
+        }
+        textarea {
+            height: 177px !important;
+            resize: none;
+        }
+    }
+}
+@keyframes hexa1 {
+    0%{transform:scale(0.6);opacity:0}
+    10%{opacity:0.3}
+    60%{opacity:0}
+    100%{transform:scale(1.5);opacity:0}
+}
+
+@media (max-width: 767px) {
+    .title {
+       text-align: center
+    }
+    .description {
+        text-align: center;
+    }
+    header {
+        .vendor {
+            padding-right: 0;
+            margin-top: 0;
+        }
+        .count-box .count {
+            width: 100% !important;
+            text-align: center;
+            clear: both;
+            p {
+                text-align: center;
+            }
+            &:last-of-type {
+                border-right: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-us {
+        display: none;
+    }
+    .nav-large {
+        display: none;
+    }
+    header {
+        .nav-icon-small {
+            display: block;
+            background-color: transparent;
+            border: 0;
+            color: $white;
+            font-size: 40px;
+            position: absolute;
+            left: 40px;
+            top: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+        .nav-small {
+            display: block;
+            position: fixed;
+            background-color: $white;
+            width: 97%;
+            right: 10px;
+            top: 10px;
+            z-index: 99;
+            @include competability(transform,scale(0));
+            @include competability(transform-origin,left top);
+            @include competability(transition,all 0.5s ease-in-out);
+            &.open-menu {
+                @include competability(transition,all 0.5s ease-in-out);
+                @include competability(transform,scale(1));
+            }
+            .close-menu {
+                    float: left;
+                    display: block;
+                    margin-bottom: 20px;
+                    @include competability(transition,all 0.5s ease-in-out);
+                i {
+                    color: #eee;
+                    font-weight: normal;
+                    font-size: 30px;
+                    cursor: pointer;
+                }
+            }
+            ul {
+                clear: both;
+            }
+            li {
+                margin: 20px auto;
+                a {
+                    z-index: 9999;
+                    color: $main-color;
+                    text-decoration: none;
+                    display: block;
+                    &.collapse-link {
+                        position: relative;
+                        color: $secondary-color;
+                        &[aria-expanded="true"]::after {
+                            content: "\f068";
+                            font-family: 'FontAwesome';
+                            position: absolute;
+                            left: 0;
+                        }
+                        &[aria-expanded="false"]::after {
+                            content: "\f067";
+                            font-family: 'FontAwesome';
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

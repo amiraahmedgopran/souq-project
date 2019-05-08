@@ -1,0 +1,53 @@
+.see-more-project {
+    background: linear-gradient(360deg, #dd5a25 0, #ef8221 100%);
+    background: -moz-linear-gradient(360deg, #dd5a25 0, #ef8221 100%);
+    background: -webkit-linear-gradient(360deg, #dd5a25 0, #ef8221 100%);
+    padding: 20px 82px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+    display: inline-block;
+    text-decoration: none !important;
+    @include competability(transition,all 0.5s ease-in-out);
+    &:hover {
+        background: linear-gradient(360deg, #ef8221 0, #dd5a25  100%);
+        background: -moz-linear-gradient(360deg, #ef8221 0, #dd5a25 100%);
+        background: -webkit-linear-gradient(360deg, #ef8221 0, #dd5a25 100%);
+        @include competability(transition,all 0.5s ease-in-out);
+        color: $white;
+    }
+}
+.hover-button {
+    border: 2px solid $secondary-color;
+    background-color: $white;
+    padding: 20px 30px;
+    font-size: 22px;
+    color: $secondary-color;
+    text-decoration: none !important;
+    display: inline-block;
+    @include competability(transition,all 0.5s ease-in-out);
+    &:hover {
+        color: $white;
+        background-color: $secondary-color;
+        @include competability(transition,all 0.5s ease-in-out);
+    }
+}
+
+@media (max-width: 767px) {
+    .projects .see-more-project {
+        padding: 19px 22px;
+        transform: translateX(-130px) !important;
+    }
+    .modal-dialog {
+        padding: 20px !important;
+        max-width: 100% !important;
+        .hover-button {
+            padding: 20px 7px;
+            font-size: 14px;
+        }
+    }
+    header .model-block.border-block {
+        border-right: none;
+        padding-right: 0;
+    }
+}
