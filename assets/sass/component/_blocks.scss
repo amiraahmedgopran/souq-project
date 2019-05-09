@@ -48,18 +48,17 @@
 @media (max-width: 767px) {
     .blocks.blocks-1, .block-2 {
         margin-top: 0;
-        display: flex;
-        justify-content: center;
         width: 100%;
         margin: auto;
+        display: inline-block;
      }
      .blocks {
          width: 100%;
      }
     .blocks .block {
         margin-top: 0;
-        width: 130px;
-        height: 146px;
+        width: 50%;
+        height: 185px;
         &.large.large-screen {
             display: none;
         }

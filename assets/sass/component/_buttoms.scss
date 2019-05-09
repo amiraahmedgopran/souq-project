@@ -51,3 +51,10 @@
         padding-right: 0;
     }
 }
+@media (max-width: 767px) {
+    .projects .see-more-project {
+        font-size: 15px;
+        padding: 18px 10px;
+        transform: translateX(-80px) !important;
+    }
+}
